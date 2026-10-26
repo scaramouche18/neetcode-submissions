@@ -1,0 +1,20 @@
+class Solution {
+    public void rotate(int[][] matrix) {
+        //brute force
+        int n = matrix.length;
+        int[][] ans = new int[n][n] ;
+        for(int i = 0; i< matrix.length;i++){
+            for(int j = 0;j<matrix[i].length;j++){
+                    ans[j][(n-1)-i] =matrix[i][j];
+            }
+        }
+
+        //copy value into
+         for(int i = 0; i< matrix.length;i++){
+            for(int j = 0;j<matrix[i].length;j++){
+                    matrix[i][j] = ans[i][j];
+            }
+        }
+       
+    }
+}
